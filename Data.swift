@@ -32,11 +32,11 @@ class Data {
             //default data
             
             pClass = [
-                "Trees": ["Japanese Maple"],
-                "Shrubs" : ["Hydrangea"],
-                "Annuals" : ["Impatien"],
-                "Tropicals" : ["Orchid"],
-                "Perennials" : ["Peony"]
+                " Trees": [],
+                " Shrubs" : [],
+                " Annuals" : [],
+                " Tropicals" : [],
+                " Perennials" : []
             ]
         }
     }
@@ -80,6 +80,7 @@ class Data {
         var safeString = variety.stringByReplacingOccurrencesOfString(" ", withString: "_", options: NSStringCompareOptions.CaseInsensitiveSearch, range: nil)
         
         return NSURL(string: "http://en.wikipedia.org/wiki/" + safeString)!
+      //  http://en.wikipedia.org/wiki/
     }
     
     struct Static {

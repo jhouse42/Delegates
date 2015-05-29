@@ -11,6 +11,7 @@ import UIKit
 class VarietyViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate {
     @IBOutlet var tableView: UITableView!
     
+ 
     var pClass: String!
     
     var varieties: [String] {
@@ -26,6 +27,7 @@ class VarietyViewController: UIViewController, UITableViewDataSource, UITableVie
         title = pClass
         
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+          tableView.tableFooterView = UIView(frame:CGRectZero)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

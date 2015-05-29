@@ -23,6 +23,7 @@ class ClassViewController: UIViewController, UITableViewDelegate, UITableViewDat
         title = "PlantFavs"
         
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+          tableView.tableFooterView = UIView(frame:CGRectZero)
     }
     
     

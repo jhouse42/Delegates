@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nyh-GX-gpc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,12 +19,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VfV-tO-8sJ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="-15" y="14" width="619" height="586"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="600" id="02r-5f-JqG"/>
-                                    <constraint firstAttribute="height" constant="600" id="E6r-Yw-aTd"/>
-                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="KxA-et-Bnv" id="9Pt-Fa-Hjy"/>
                                     <outlet property="delegate" destination="KxA-et-Bnv" id="8FJ-Vr-o2p"/>
@@ -32,20 +29,28 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="VfV-tO-8sJ" firstAttribute="leading" secondItem="TJj-4V-oG0" secondAttribute="leadingMargin" constant="-16" id="YBj-GP-gmi"/>
-                            <constraint firstItem="VfV-tO-8sJ" firstAttribute="top" secondItem="TJj-4V-oG0" secondAttribute="topMargin" id="qw6-tD-FjB"/>
+                            <constraint firstItem="VfV-tO-8sJ" firstAttribute="top" secondItem="PvI-TB-n4h" secondAttribute="bottom" constant="-50" id="MKW-gA-rlM"/>
+                            <constraint firstItem="VfV-tO-8sJ" firstAttribute="leadingMargin" secondItem="TJj-4V-oG0" secondAttribute="leading" id="P9i-vf-lL2"/>
+                            <constraint firstItem="jOy-tn-4mp" firstAttribute="top" secondItem="VfV-tO-8sJ" secondAttribute="bottom" id="dtq-7i-Fc6"/>
                             <constraint firstItem="jOy-tn-4mp" firstAttribute="top" secondItem="VfV-tO-8sJ" secondAttribute="bottom" id="rxC-zr-HoI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="VfV-tO-8sJ" secondAttribute="trailing" constant="-16" id="wDX-eK-I7A"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VfV-tO-8sJ" secondAttribute="trailing" constant="-20" id="xxf-PH-x0b"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="rxC-zr-HoI"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="Ere-Hr-MgH"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="VfV-tO-8sJ" id="Brj-0r-GiE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zIk-7D-57L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1324" y="420"/>
+            <point key="canvasLocation" x="1347" y="420"/>
         </scene>
         <!--Variety View Controller-->
         <scene sceneID="gi7-7f-isp">
@@ -59,13 +64,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TCV-gU-JUa">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TCV-gU-JUa">
+                                <rect key="frame" x="-15" y="12" width="630" height="596"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="600" id="LIM-i0-TMz"/>
-                                    <constraint firstAttribute="width" constant="600" id="qn6-RT-siZ"/>
-                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="r2w-op-Uu0" id="PpN-hu-UwF"/>
                                     <outlet property="delegate" destination="r2w-op-Uu0" id="XHd-oc-sog"/>
@@ -74,14 +75,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="TCV-gU-JUa" secondAttribute="centerY" id="6mZ-SM-5qK"/>
-                            <constraint firstItem="TCV-gU-JUa" firstAttribute="leading" secondItem="oJu-gM-Nc4" secondAttribute="leadingMargin" constant="-16" id="Flc-VF-F3V"/>
-                            <constraint firstItem="TCV-gU-JUa" firstAttribute="top" secondItem="oJu-gM-Nc4" secondAttribute="topMargin" id="GX0-zk-vdW"/>
+                            <constraint firstItem="TCV-gU-JUa" firstAttribute="leadingMargin" secondItem="oJu-gM-Nc4" secondAttribute="leading" id="Ezc-no-tMt"/>
+                            <constraint firstItem="hTc-yg-Ydp" firstAttribute="bottom" secondItem="TCV-gU-JUa" secondAttribute="bottomMargin" id="IHw-Fb-Z6A"/>
                             <constraint firstItem="hTc-yg-Ydp" firstAttribute="top" secondItem="TCV-gU-JUa" secondAttribute="bottom" id="Iln-Va-Vgp"/>
-                            <constraint firstAttribute="centerX" secondItem="TCV-gU-JUa" secondAttribute="centerX" id="egN-dV-taf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="TCV-gU-JUa" secondAttribute="trailing" constant="-16" id="lGX-Gm-XLI"/>
+                            <constraint firstAttribute="trailing" secondItem="TCV-gU-JUa" secondAttribute="trailingMargin" id="gkv-Ft-Tqb"/>
+                            <constraint firstAttribute="top" secondItem="TCV-gU-JUa" secondAttribute="topMargin" constant="-20" id="rUr-dP-dpB"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Iln-Va-Vgp"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="NGS-vG-i6q">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8Gk-hr-yle">
                             <connections>
@@ -90,13 +96,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="TCV-gU-JUa" id="TVX-h7-WiO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Avi-Pu-K2G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1323" y="1141"/>
+            <point key="canvasLocation" x="1347" y="1089"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="8Y0-Ic-mB0">
@@ -110,12 +117,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yIz-yw-H6f">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yIz-yw-H6f">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yIz-yw-H6f" firstAttribute="bottom" secondItem="NM0-6z-lLa" secondAttribute="top" id="7Vu-Qj-ArL"/>
+                            <constraint firstAttribute="trailing" secondItem="yIz-yw-H6f" secondAttribute="trailing" id="M6E-hK-LUf"/>
+                            <constraint firstItem="yIz-yw-H6f" firstAttribute="top" secondItem="sYE-X4-RPH" secondAttribute="top" id="Ygb-tv-Hwo"/>
+                            <constraint firstItem="yIz-yw-H6f" firstAttribute="leading" secondItem="sYE-X4-RPH" secondAttribute="leading" id="fxk-eH-cJQ"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="webView" destination="yIz-yw-H6f" id="Pb0-Y4-zSg"/>
